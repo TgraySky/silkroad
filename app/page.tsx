@@ -6,9 +6,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Camera, Sparkles, Users, Briefcase, Heart, GraduationCap } from "lucide-react"
 import Link from "next/link"
-import dynamic from "next/dynamic"
-
-const Adsense = dynamic(() => import("@/components/Adsense"), { ssr: false })
 
 const scenarios = [
   {
@@ -155,9 +152,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Google AdSense 广告位 */}
-      <Adsense slot="8420577119" />
 
       {/* Features */}
       <section className="bg-white py-16">

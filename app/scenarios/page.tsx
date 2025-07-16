@@ -24,8 +24,6 @@ import {
   Check,
 } from "lucide-react"
 import Link from "next/link"
-import dynamic from "next/dynamic"
-const Adsense = dynamic(() => import("@/components/Adsense"), { ssr: false })
 
 const scenarios = [
   {
@@ -266,12 +264,6 @@ export default function ScenariosPage() {
               </Card>
             )
           })}
-        </div>
-
-        {/* 广告位：场景选择页下方 */}
-        <div className="flex justify-center my-8">
-          {/* TODO: 替换为你在AdSense后台新建的场景页广告slot */}
-          <Adsense slot="场景页广告slot" />
         </div>
 
         {/* Next Button */}

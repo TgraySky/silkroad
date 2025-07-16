@@ -429,7 +429,6 @@ export default function GeneratePage() {
         {/* 广告位：生成页进度条下方 */}
         <div className="flex justify-center my-8">
           {/* TODO: 替换为你在AdSense后台新建的生成页广告slot */}
-          <Adsense slot="生成页广告slot" />
         </div>
       </div>
     </div>

@@ -18,7 +18,6 @@ import {
 import Link from "next/link"
 import Image from "next/image"
 import dynamic from "next/dynamic"
-const Adsense = dynamic(() => import("@/components/Adsense"), { ssr: false })
 
 export default function UploadPage() {
   const router = useRouter()
@@ -232,7 +231,7 @@ export default function UploadPage() {
           {/* 广告位：上传页右侧 */}
           <div className="flex items-center justify-center">
             {/* TODO: 替换为你在AdSense后台新建的上传页广告slot */}
-            <Adsense slot="上传页广告slot" />
+            {/* 移除 Adsense 组件 */}
           </div>
         </div>
 
