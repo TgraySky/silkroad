@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Simulated affiliate link database
 const links = {
-  "pjat": "https://www.pjatr.com/t/8-11924-88878-170958?sid=55hto_91htec3t"
+  "aloyoga": "https://www.pjatr.com/t/8-11924-88878-170958?sid=55hto_91htec3t"
 };
 
 router.get("/:brand", (req, res) => {

@@ -3,12 +3,10 @@ const router = express.Router();
 
 // Simulated coupon data
 const storeCoupons = {
-  "pjat": [
-    { code: "SUMMER30", desc: "30% Off Coupon Code 100% Using", type: "Coupon", brand: "pjat" },
-    { code: "SAVE10", desc: "10% Off Coupon Code 100% Using", type: "Coupon", brand: "pjat" },
-    { code: "FIRST400", desc: "15% Off Your 1st Order Over $400+", type: "Coupon", brand: "pjat" },
-    { code: "FIRST200", desc: "15% Off Your 1st Order Over $200+", type: "Coupon", brand: "pjat" },
-    { code: "", desc: "Free shipping on all orders", type: "Deal", brand: "pjat" }
+  "aloyoga": [
+    { code: "ALO15", desc: "15% Off Sitewide", type: "Coupon", brand: "aloyoga" },
+    { code: "FREESHIP", desc: "Free Shipping on All Orders", type: "Deal", brand: "aloyoga" },
+    { code: "NEW20", desc: "20% Off First Order", type: "Coupon", brand: "aloyoga" }
   ]
 };
 
