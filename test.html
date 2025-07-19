@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Show Code Function</title>
+</head>
+<body>
+    <h1>Test Show Code Function</h1>
+    
+    <button class="action-button" 
+            data-code="SUMMER30" 
+            data-desc="30% Off Coupon Code 100% Using" 
+            data-brand="pjat" 
+            onclick="showCouponCode(this)">
+        Show Code
+    </button>
+    
+    <script>
+        function showCouponCode(button) {
+            console.log('showCouponCode function called');
+            try {
+                const code = button.getAttribute('data-code');
+                const description = button.getAttribute('data-desc');
+                const brand = button.getAttribute('data-brand');
+                
+                console.log('Parameters:', { code, description, brand });
+                
+                // 新建窗口显示折扣码弹窗
+                const couponUrl = `/stores/${encodeURIComponent(brand)}/coupon/${encodeURIComponent(code)}`;
+                console.log('Opening URL:', couponUrl);
+                
+                const popup = window.open(couponUrl, '_blank', 'width=500,height=400,scrollbars=yes,resizable=yes');
+                
+                if (popup) {
+                    console.log('Popup opened successfully');
+                } else {
+                    console.log('Popup was blocked by browser');
+                }
+                
+                // 当前窗口跳转到offer链接
+                setTimeout(() => {
+                    console.log('Redirecting to:', `/go/${encodeURIComponent(brand)}`);
+                    window.location.href = `/go/${encodeURIComponent(brand)}`;
+                }, 100);
+            } catch (error) {
+                console.error('Error in showCouponCode:', error);
+                // 如果出错，直接跳转到offer链接
+                const brand = button.getAttribute('data-brand');
+                window.location.href = `/go/${encodeURIComponent(brand)}`;
+            }
+        }
+        
+        // 添加页面加载完成的调试信息
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded, checking buttons...');
+            const buttons = document.querySelectorAll('.action-button[data-code]');
+            console.log('Found', buttons.length, 'Show Code buttons');
+            
+            buttons.forEach((button, index) => {
+                console.log(`Button ${index + 1}:`, {
+                    code: button.getAttribute('data-code'),
+                    brand: button.getAttribute('data-brand')
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
