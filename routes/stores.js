@@ -4,9 +4,9 @@ const router = express.Router();
 // Simulated coupon data
 const storeCoupons = {
   "aloyoga": [
-    { code: "ALO15", desc: "15% Off Sitewide", type: "Coupon", brand: "aloyoga" },
+    { code: "ALO30", desc: "30% Off Alo Yoga Coupon", type: "Coupon", brand: "aloyoga" },
     { code: "FREESHIP", desc: "Free Shipping on All Orders", type: "Deal", brand: "aloyoga" },
-    { code: "NEW20", desc: "20% Off First Order", type: "Coupon", brand: "aloyoga" }
+    { code: "FIRST15", desc: "15% Off Your 1st Order", type: "Coupon", brand: "aloyoga" }
   ]
 };
 
