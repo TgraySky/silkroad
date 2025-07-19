@@ -13,21 +13,19 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      background-color: #F0F0F0;
-      background-image: 
-        radial-gradient(circle at 25% 25%, rgba(0,0,0,0.02) 1px, transparent 1px),
-        radial-gradient(circle at 75% 75%, rgba(0,0,0,0.02) 1px, transparent 1px);
-      background-size: 20px 20px;
+      background: #f7f8fa;
       min-height: 100vh;
     }
 
     .header {
-      background: linear-gradient(135deg, #343A60 0%, #2C3E50 100%);
-      padding: 20px 30px;
+      background: #fff;
+      padding: 24px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(102,126,234,0.06);
+      border-radius: 0 0 16px 16px;
+      border-bottom: 1.5px solid #ececf3;
     }
 
     .logo {
@@ -39,219 +37,198 @@
     .logo-icon {
       width: 40px;
       height: 40px;
-      background: #6C757D;
+      background: #ececf3;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .logo-icon::before {
-      content: "2";
-      position: absolute;
-      left: 8px;
-      color: white;
       font-weight: bold;
-      font-size: 18px;
-    }
-
-    .logo-icon::after {
-      content: "4";
-      position: absolute;
-      right: 8px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
+      color: #764ba2;
+      font-size: 1.3rem;
+      box-shadow: 0 2px 8px rgba(102,126,234,0.04);
     }
 
     .logo-text {
-      color: white;
-      font-size: 14px;
-      font-weight: 500;
+      color: #764ba2;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .header-title {
-      color: white;
-      font-size: 24px;
+      color: #2C3E50;
+      font-size: 26px;
       font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .home-link {
+      color: #764ba2;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: #f3f0fa;
+      transition: background 0.2s;
+    }
+    .home-link:hover {
+      background: #ececf3;
     }
 
     .main-content {
-      padding: 30px;
+      padding: 40px 20px 30px 20px;
       max-width: 900px;
       margin: 0 auto;
     }
 
+    .page-intro {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 24px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(102,126,234,0.04);
+      border: 1.5px solid #ececf3;
+    }
+    .page-intro h2 {
+      color: #764ba2;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .page-intro p {
+      color: #6C757D;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
     .offer-card {
-      background: white;
-      border: 1px solid #E0E0E0;
-      border-radius: 12px;
-      padding: 28px 32px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: #fff;
+      border: 1.5px solid #ececf3;
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 16px rgba(102,126,234,0.06);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s, box-shadow 0.2s;
       min-height: 100px;
     }
-
     .offer-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 8px 32px rgba(118,75,162,0.10);
+      border-color: #d6c8f5;
     }
 
     .offer-content {
       flex: 1;
-      margin-right: 24px;
+      margin-right: 28px;
     }
-
     .offer-description {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       color: #2C3E50;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       line-height: 1.4;
     }
-
     .coupon-tag {
       display: inline-block;
-      background: #FFD700;
-      color: #2C3E50;
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
+      background: #f3f0fa;
+      color: #764ba2;
+      padding: 7px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(102,126,234,0.04);
+      border: 1px solid #ececf3;
     }
-
     .deal-tag {
       display: inline-block;
-      background: #E8F5E8;
-      color: #27AE60;
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 600;
+      background: #eaf7f3;
+      color: #229954;
+      padding: 7px 18px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(102,126,234,0.04);
+      border: 1px solid #d2f0e3;
     }
-
     .action-button {
-      background: linear-gradient(135deg, #00BFFF 0%, #0099CC 100%);
-      color: white;
+      background: #764ba2;
+      color: #fff;
       border: none;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 15px;
-      font-weight: 600;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.2s;
       text-decoration: none;
       display: inline-block;
       text-align: center;
-      min-width: 140px;
+      min-width: 150px;
+      box-shadow: 0 2px 8px rgba(102,126,234,0.08);
     }
-
     .action-button:hover {
-      background: linear-gradient(135deg, #0099CC 0%, #0077AA 100%);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+      background: #5e3e9c;
+      color: #fff;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 6px 20px rgba(118,75,162,0.13);
     }
-
     .action-button:active {
       transform: translateY(0);
-    }
-
-    .home-link {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 8px 12px;
-      border-radius: 6px;
-      background-color: rgba(255, 255, 255, 0.2);
-      transition: background-color 0.2s ease;
-    }
-
-    .home-link:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .page-intro {
-      text-align: center;
-      margin-bottom: 30px;
-      padding: 20px;
-      background-color: #F8F9FA;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .page-intro h2 {
-      color: #343A60;
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-
-    .page-intro p {
-      color: #6C757D;
-      font-size: 16px;
-      line-height: 1.6;
     }
 
     .page-footer {
       margin-top: 40px;
       padding-top: 20px;
-      border-top: 1px solid #E0E0E0;
+      border-top: 1px solid #ececf3;
       text-align: center;
     }
-
     .trust-badges {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
       flex-wrap: wrap;
     }
-
     .trust-badge {
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #2C3E50;
-      font-size: 14px;
-      font-weight: 500;
+      color: #764ba2;
+      font-size: 15px;
+      font-weight: 600;
+      background: #f3f0fa;
+      padding: 8px 18px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(102,126,234,0.04);
+      border: 1px solid #ececf3;
     }
-
     .badge-icon {
       font-size: 20px;
     }
 
-    @media (max-width: 768px) {
-      .header {
-        padding: 15px 20px;
-      }
-      
+    @media (max-width: 900px) {
       .main-content {
-        padding: 20px;
-        max-width: 100%;
+        padding: 20px 5px 20px 5px;
       }
-      
       .offer-card {
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
-        padding: 20px;
+        gap: 18px;
+        padding: 24px 16px;
       }
-      
       .offer-content {
         margin-right: 0;
       }
-      
       .action-button {
         align-self: stretch;
+        width: 100%;
       }
     }
   </style>
@@ -259,7 +236,7 @@
 <body>
   <header class="header">
     <div class="logo">
-      <div class="logo-icon"></div>
+      <div class="logo-icon">24</div>
       <span class="logo-text">Alo Yoga</span>
     </div>
     <h1 class="header-title">Alo Yoga Coupons</h1>
