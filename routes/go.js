@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const links = {
-  "aloyoga": "https://www.aloyoga.com/collections/womens-sale?affid=your-affiliate-id"
+  "aloyoga": "https://www.pjatr.com/t/8-11924-88878-170958?sid=55hto_91htec3t"
 };
 
 router.get("/:brand", (req, res) => {
